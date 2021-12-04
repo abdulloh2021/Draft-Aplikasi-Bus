@@ -173,7 +173,6 @@ public class WebController {
 		Booking dataBookingPilihan = dataBooking.get(dataBooking.size()-1);
 		model.addAttribute("dataBookingTampil", dataBookingPilihan);	
 		return "bookingdetail";
-		
 	}
 // yg lama
 	// @PostMapping("/postbooking")
