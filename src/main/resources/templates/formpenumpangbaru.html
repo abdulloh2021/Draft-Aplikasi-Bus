@@ -84,7 +84,7 @@
         </div>
       </nav>
       <div
-        class="page-header min-vh-35"
+        class="page-header min-vh-55"
         style="
           background-image: url(https://images.unsplash.com/photo-1501446529957-6226bd447c46?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2378&q=80);
         "
@@ -121,43 +121,53 @@
                     th:object="${formData}"
                     th:action="@{/createpenumpang}"
                     method="post"
+                    autocomplete="off"
                   >
-                    <br />
-
-                    <div class="form-daftar">
-                      <div class="form-group">
-                        <label for="exampleNik">NIK</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="inputNik"
-                          th:field="*{nik}"
-                        />
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="mb-4">
+                          <div class="input-group input-group-dynamic">
+                            <label class="form-label">NIK</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputNik"
+                              th:field="*{nik}"
+                            />
+                          </div>
+                        </div>
                       </div>
-                      <div class="form-group">
-                        <label for="exampleNama">Nama</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="inputNama"
-                          th:field="*{nama}"
-                        />
+                      <div class="mb-4">
+                        <div class="input-group input-group-dynamic">
+                          <label class="form-label">Nama</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputNama"
+                            th:field="*{nama}"
+                          />
+                        </div>
                       </div>
-                      <div class="form-group">
-                        <label for="exampleNomorTelepon">Nomor Telpon</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="inputNomorTelepon"
-                          th:field="*{telepon}"
-                        />
+                      <div class="mb-4">
+                        <div class="input-group input-group-dynamic">
+                          <label class="form-label">Nomor Telepon</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputNomorTelepon"
+                            th:field="*{telepon}"
+                          />
+                        </div>
                       </div>
-
-                      <br />
-                      <div class="submit text-center">
-                        <button type="submit" class="btn btn-primary">
-                          Submit
-                        </button>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <button
+                            type="submit"
+                            class="btn bg-gradient-dark w-100"
+                          >
+                            Login
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </form>
